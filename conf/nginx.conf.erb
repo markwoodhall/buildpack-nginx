@@ -11,6 +11,7 @@ http {
   types_hash_max_size 2048;
   include mime.types;
   server {
+    error_page 404 /404.html;
     port_in_redirect off;
     listen <%= ENV["PORT"] %>;
     server_name  _;
